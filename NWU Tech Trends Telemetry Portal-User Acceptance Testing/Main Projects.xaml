@@ -160,15 +160,24 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Create 1'" sap:VirtualizedContainerService.HintSize="438,225" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63fa2d12-2b37-45f6-bbeb-d017331fce06" Version="V4">
+                      <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Create first'" sap:VirtualizedContainerService.HintSize="438,225" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63fa2d12-2b37-45f6-bbeb-d017331fce06" Version="V4">
                         <uix:NClick.Target>
                           <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/projects" CVScreenId="4f16b213-1931-40b7-ad9a-7ccd40bd1e3a" CvElementArea="1227, 252, 109, 47" CvType="Button" DesignTimeRectangle="1244, 266, 14, 16" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl tag='I' type='' class='fas fa-plus' aaname='' /&gt;" Guid="fea76bd1-9870-4e4a-8845-76420b82a5cb" InformativeScreenshot="06351f1b507f5035732f0eb077ad4de1.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Projects' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
-                          <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                          <uix:VerifyExecutionOptions DisplayName="Input 'Project Name'" Mode="Appears">
                             <uix:VerifyExecutionOptions.Retry>
                               <InArgument x:TypeArguments="x:Boolean" />
                             </uix:VerifyExecutionOptions.Retry>
+                            <uix:VerifyExecutionOptions.Target>
+                              <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/create-project" CVScreenId="844bdbef-efbd-40dd-ac1a-51465889fb08" CvElementArea="293, 262, 1054, 40" CvType="InputBox" DesignTimeRectangle="294, 264, 1052, 38" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl id='projectName' tag='INPUT' type='' class='form-control valid' aaname='Project Name' /&gt;" Guid="808d93e0-ac2c-4e3c-9fa9-61b949f849fe" InformativeScreenshot="25558b4fb79241067ff417d3eda9fef8.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='techtrendstelemetryportal.azurewebsites.net/create-project' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                    <uix:Target CVScreenId="844bdbef-efbd-40dd-ac1a-51465889fb08" CvTextArea="293, 243, 98, 18" CvTextArgument="Project Name" CvType="Text" DesignTimeRectangle="294, 240, 97, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='LABEL' type='' class='' aaname='Project Name' check:innerText='Project Name' /&gt;" Guid="5bfcf90e-65e6-4032-b7fb-f24ecf9a62c2" SearchSteps="FuzzySelector, CV" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:VerifyExecutionOptions.Target>
                             <uix:VerifyExecutionOptions.Timeout>
                               <InArgument x:TypeArguments="x:Double" />
                             </uix:VerifyExecutionOptions.Timeout>
@@ -314,7 +323,7 @@
                                 </uix:VerifyExecutionOptions>
                               </uix:NClick.VerifyOptions>
                             </uix:NClick>
-                            <ui:WriteCell Cell="A1:46" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Projects" Text="True" WorkbookPath="C:\Users\moloi\Downloads\NWU Tech Trends Data (1).xlsx" />
+                            <ui:WriteCell Cell="G2:G46" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="354,139" sap2010:WorkflowViewState.IdRef="WriteCell_1" SheetName="Projects" Text="True" WorkbookPath="C:\Users\moloi\Downloads\NWU Tech Trends Data (1).xlsx" />
                           </Sequence>
                         </TryCatch.Try>
                         <TryCatch.Catches>
@@ -329,12 +338,12 @@
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                               </ActivityAction.Argument>
-                              <ui:WriteCell Cell="A1:46" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Projects" Text="False" WorkbookPath="C:\Users\moloi\Downloads\NWU Tech Trends Data (1).xlsx" />
+                              <ui:WriteCell Cell="G2:G46" DisplayName="Write Cell Workbook" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="WriteCell_2" SheetName="Projects" Text="False" WorkbookPath="C:\Users\moloi\Downloads\NWU Tech Trends Data (1).xlsx" />
                             </ActivityAction>
                           </Catch>
                         </TryCatch.Catches>
                         <TryCatch.Finally>
-                          <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="334,193" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63fa2d12-2b37-45f6-bbeb-d017331fce06" Version="V4">
+                          <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="334,193" sap2010:WorkflowViewState.IdRef="NClick_20" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="63fa2d12-2b37-45f6-bbeb-d017331fce06" Version="V4">
                             <uix:NClick.Target>
                               <uix:TargetAnchorable BrowserURL="https://techtrendstelemetryportal.azurewebsites.net/edit-project/965905d3-5b30-41f7-820d-0e6e05280a81" CVScreenId="1867b656-e625-488a-8189-84bc1ff2429d" CvElementArea="292, 549, 65, 40" CvTextArea="305, 560, 39, 15" CvTextArgument="Save" CvType="Button" DesignTimeRectangle="294, 550, 62, 38" DesignTimeScaleFactor="1" ElementType="Button" FuzzySelectorArgument="&lt;webctrl aaname='Save' tag='BUTTON' type='submit' class='btn btn-primary' check:innerText='Save' /&gt;" Guid="60f4e874-2ef5-4672-9c2e-208cb168c15c" InformativeScreenshot="1c62fc94e019da4c591d7ca5594a895b.png" ScopeSelectorArgument="&lt;html app='msedge.exe' title='techtrendstelemetryportal.azurewebsites.net/edit-project/965905d3-5b30-41f7-820d-0e6e05280a81' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                             </uix:NClick.Target>

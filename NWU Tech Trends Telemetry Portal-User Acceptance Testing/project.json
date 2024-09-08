@@ -2,7 +2,7 @@
   "name": "NWU Tech Trends Telemetry Portal-User Acceptance Testing",
   "projectId": "e02b8439-1e2d-47ea-87b9-43760c192c6d",
   "description": "Blank Process",
-  "main": "Main.xaml",
+  "main": "Main Clients.xaml",
   "dependencies": {
     "UiPath.Excel.Activities": "[2.24.0-preview]",
     "UiPath.Mail.Activities": "[1.23.11]",
@@ -49,8 +49,8 @@
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "e334fb99-2e9c-474c-8f49-bcdf12cf101d",
+      "filePath": "Main Clients.xaml",
+      "uniqueId": "396a34f0-8967-4182-a6c1-073fb15a14d5",
       "input": [],
       "output": []
     }
